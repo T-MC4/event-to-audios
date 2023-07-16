@@ -1,0 +1,24 @@
+node_modules
+
+# Ignore audio files
+data/AUDIO/mono-audios/*.wav
+data/AUDIO/mono-audios/*.mp3
+data/AUDIO/dual-audios/*.wav
+data/AUDIO/dual-audios/*.mp3
+
+# Ignore CSV files
+data/CSV/*.CSV
+
+# Ignore JSON Files
+data/JSON/dual-json/*.JSON
+data/JSON/mono-json/*.JSON
+data/JSON/client-json/*.JSON
+data/JSON/event-json/*.JSON
+data/to-download/*.JSON
+data/to-download-real
+
+# Ignore .env
+.env
+
+# Ignore temp files
+.DS_Store
