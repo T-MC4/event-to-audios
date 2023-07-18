@@ -38,8 +38,8 @@ const dualAudioDirectory = `${audioDirectory}/dual-audios`;
 const monoAudioDirectory = `${audioDirectory}/mono-audios`;
 
 // JSON output files for different data types
-const dualOutputFile = `${jsonDirectory}/dual-json/dual-closer-calls-with-paths.json`;
-const monoOutputFile = `${jsonDirectory}/mono-json/mono-closer-calls-with-paths.json`;
+const dualOutputFile = `${jsonDirectory}/dual-json/twilio-closer-dual-calls.json`;
+const monoOutputFile = `${jsonDirectory}/mono-json/twilio-closer-mono-calls.json`;
 const scale13ClientOutputFile = `${jsonDirectory}/client-json/scale13ClientRecordings-closer-twilio.json`;
 
 // ---------------------------------------- //
