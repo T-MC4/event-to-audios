@@ -132,6 +132,21 @@ async function downloadAudio(url, id) {
     });
 }
 
+function extractRecordingSid(url) {
+    // Create a new URL object
+    const parsedUrl = new URL(url);
+
+    // Split the pathname into segments and get the last non-empty one
+    let recordingSid = parsedUrl.pathname.split('/').filter(Boolean).pop();
+
+    // Remove .wav extension if it exists
+    if (recordingSid.endsWith('.wav')) {
+        recordingSid = recordingSid.substring(0, recordingSid.length - 4);
+    }
+
+    return recordingSid;
+}
+
 function getAudioType(audioPath) {
     return new Promise((resolve, reject) => {
         ffmpeg.ffprobe(audioPath, function (err, metadata) {
@@ -172,7 +187,7 @@ async function processAudio(obj) {
                 CallDuration: obj.CallDuration,
                 RecordingUrl: finalUrl, // Changed obj.RecordingUrl to finalUrl
                 CallSid: obj.CallSid,
-                RecordingSid: obj.RecordingSid,
+                RecordingSid: extractRecordingSid(finalUrl),
                 Timestamp: obj.Timestamp,
                 AudioPath: localPath,
                 Type: type,
