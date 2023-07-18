@@ -1,24 +1,28 @@
 node_modules
 
-# Ignore audio files
-data/AUDIO/mono-audios/*.wav
-data/AUDIO/mono-audios/*.mp3
-data/AUDIO/dual-audios/*.wav
-data/AUDIO/dual-audios/*.mp3
+# Ignore all data folder
+data/*/
 
-# Ignore CSV files
-data/CSV/*.CSV
+# Keep folders that have a .gitkeep
+!data/AUDIO/mono-audios/*.gitkeep
+!data/AUDIO/dual-audios/*.gitkeep
 
-# Ignore JSON Files
-data/JSON/dual-json/*.JSON
-data/JSON/mono-json/*.JSON
-data/JSON/client-json/*.JSON
-data/JSON/event-json/*.JSON
-data/to-download/*.JSON
-data/to-download-real
+# Keep folders that have a .gitkeep
+!data/CSV/*.gitkeep
+
+# Keep folders that have a .gitkeep
+!data/JSON/dual-json/*.gitkeep
+!data/JSON/mono-json/*.gitkeep
+!data/JSON/client-json/*.gitkeep
+!data/JSON/event-json/*.gitkeep
+!data/to-download/*.gitkeep
+!data/to-filter/*.gitkeep
 
 # Ignore .env
 .env
 
 # Ignore temp files
 .DS_Store
+
+# Ignore root-level json files
+*.json
