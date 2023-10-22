@@ -1,19 +1,27 @@
 {
-	"name": "csv-to-json",
-	"version": "1.0.0",
-	"description": "Convert CSV files to JSON files",
-	"main": "csv-to-json.js",
-	"type": "module",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"dependencies": {
-		"axios": "^1.4.0",
-		"csv-parser": "^3.0.0",
-		"dotenv": "^16.3.1",
-		"fluent-ffmpeg": "^2.1.2",
-		"jsonfile": "^6.1.0",
-		"p-limit": "^4.0.0",
-		"twilio": "^4.14.0"
-	}
+    "name": "csv-to-json",
+    "version": "1.0.0",
+    "description": "Convert CSV files to JSON files",
+    "main": "csv-to-json.js",
+    "type": "module",
+    "scripts": {
+        "download": "node scripts/audioDownload.js",
+        "get-events": "node scripts/get-events.js",
+        "get-logs": "node scripts/get-call-logs.js",
+        "get-close": "node scripts/get-close-logs.js",
+        "filter-logs": "node scripts/callLogs-json-filter.js",
+        "filter-events": "node scripts/events-json-filter.js"
+    },
+    "dependencies": {
+        "axios": "^1.4.0",
+        "close.io": "^1.3.0",
+        "csv-parser": "^3.0.0",
+        "csv-writer": "^1.6.0",
+        "dotenv": "^16.3.1",
+        "fluent-ffmpeg": "^2.1.2",
+        "jsonfile": "^6.1.0",
+        "node-fetch": "^3.3.1",
+        "p-limit": "^4.0.0",
+        "twilio": "^4.14.0"
+    }
 }

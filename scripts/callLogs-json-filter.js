@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const sourceDirectory = './data/to-filter';
-const outputFile = './data/to-download/twilio-closer-calls.json'; // The path to the output JSON file
+const outputFile = './data/to-download/twilio-setter-calls.json'; // The path to the output JSON file
 
 // Initialize an empty array to hold the extracted data
 let extractedData = [];
